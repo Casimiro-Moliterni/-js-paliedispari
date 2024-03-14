@@ -25,3 +25,18 @@ console.log(userEvenorOdd)
 
 const userNumber = parseInt(prompt('Scegli un numero da 1 a 5 !'));
 console.log(userNumber)
+
+const randomNumberSoftware = getRndInteger(1,5)
+console.log(randomNumberSoftware)
+
+let Result = numberSum(userNumber,randomNumberSoftware);
+console.log(Result)
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+  function numberSum ( numberUser,NumberSoftware){
+       const sum = numberUser + NumberSoftware ;
+       return sum ;
+  }
