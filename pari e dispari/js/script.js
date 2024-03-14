@@ -32,6 +32,12 @@ console.log(randomNumberSoftware)
 let Result = numberSum(userNumber,randomNumberSoftware);
 console.log(Result)
 
+Result = isEvenorOdd(Result);
+console.log(Result)
+
+const WinnerResult = winnerOfTheMatchPlay(userEvenorOdd,Result);
+console.log(WinnerResult)
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
@@ -39,4 +45,26 @@ function getRndInteger(min, max) {
   function numberSum ( numberUser,NumberSoftware){
        const sum = numberUser + NumberSoftware ;
        return sum ;
+  }
+
+  function isEvenorOdd(number){
+
+  let isEvenorOddResult ;
+    if(number % 2 === 0){
+      isEvenorOddResult = 'pari'
+    }else {
+        isEvenorOddResult = 'dispari'
+    };
+    return isEvenorOddResult;
+  }
+
+  function winnerOfTheMatchPlay(userEvenorOdd,Result){
+     
+    let Winner ;
+    if(userEvenorOdd === Result ){
+        Winner = 'hai vinto !'
+    } else {
+        Winner = 'Hai perso'
+    }
+   return Winner ;
   }
