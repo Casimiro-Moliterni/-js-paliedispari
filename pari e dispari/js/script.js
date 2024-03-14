@@ -21,22 +21,22 @@
 //   creare funzione che stabilisce se il risulto della somma è pari o dispari si decreta il vincitore in base alla scelta dell'utente di pari o dispari 
 
 const userEvenorOdd = prompt('Pari o Dispari ? scegli');
-console.log(userEvenorOdd)
+console.log('hai scelto:',userEvenorOdd)
 
 const userNumber = parseInt(prompt('Scegli un numero da 1 a 5 !'));
-console.log(userNumber)
+console.log("numero scelto  dall'utente:",userNumber)
 
 const randomNumberSoftware = getRndInteger(1,5)
-console.log(randomNumberSoftware)
+console.log('Numero random :',randomNumberSoftware)
 
 let Result = numberSum(userNumber,randomNumberSoftware);
-console.log(Result)
+console.log('risultato della somma :',Result)
 
 Result = isEvenorOdd(Result);
-console.log(Result)
+console.log('il numero è:',Result)
 
 const WinnerResult = winnerOfTheMatchPlay(userEvenorOdd,Result);
-console.log(WinnerResult)
+console.log(WinnerResult + ' ' + 'il numero è:' + ' ' + Result)
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -62,9 +62,9 @@ function getRndInteger(min, max) {
      
     let Winner ;
     if(userEvenorOdd === Result ){
-        Winner = 'hai vinto !'
+        Winner = 'hai vinto !';
     } else {
-        Winner = 'Hai perso'
+        Winner = 'Hai perso';
     }
    return Winner ;
   }
