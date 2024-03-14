@@ -23,6 +23,8 @@
 const userEvenorOdd = prompt('Pari o Dispari ? scegli');
 console.log('hai scelto:',userEvenorOdd)
 
+
+
 const userNumber = parseInt(prompt('Scegli un numero da 1 a 5 !'));
 console.log("numero scelto  dall'utente:",userNumber)
 
