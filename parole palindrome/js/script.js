@@ -17,11 +17,12 @@
 
 
 let userWord = prompt('Inserisci una parola');
-
+console.log('hai scritto:',userWord)
 const wordResult = wordRevert(userWord);
-console.log(wordResult)
+console.log('il risultato inverso è:', wordResult)
 
-
+const resultWord = calculatorWordPalindrom(wordResult);
+console.log('questa parola :' + ' ' + resultWord)
 
 function wordRevert(word){
 
@@ -32,18 +33,18 @@ function wordRevert(word){
     let revertWord = '';
     for ( let i = userWord.length - 1 ; i >= 0 ; i--){
         const thisRevertWord = userWord[i];
-
         revertWord += thisRevertWord;
     };
+    return revertWord ;
 }
 
 function calculatorWordPalindrom(reverword){
     let message ;
-    if ( revertWord === userWord){
-          message = 'la parola è palindroma'
+    if ( wordResult === userWord){
+          message = ' è palindroma'
 
     }else{
-        message = 'la parola non è palindroma'
+        message = ' non è palindroma'
     }
     return message;
 }
